@@ -1,3 +1,11 @@
+"use client";
+import React from "react";
+import Hero from './components/sections/Hero'
+import AboutSmall from "./components/sections/About-Small";
+import { Projects } from "./components/sections/Projects";
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div><Hero /> <Projects /></div>
+  );
 }
