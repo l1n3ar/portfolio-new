@@ -73,7 +73,7 @@ export const FloatingNav = ({
   borderRadius="1.75rem"
   className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 transition-all duration-150 ease-in-out transform hover:bg-gray-100 dark:hover:bg-slate-700 hover:shadow-lg active:bg-gray-200 dark:active:bg-slate-600 active:shadow-sm active:translate-y-0.5"
 >
-  Resume
+  Resumé
 </Button>
       </motion.div>
     
