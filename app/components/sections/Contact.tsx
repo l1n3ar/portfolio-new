@@ -35,12 +35,12 @@ export function Contact() {
       <div className="flex flex-col justify-center items-center space-y-2">
         {/* <h1 className="text-slate-500 text-7xl font-light ">Testimonials </h1> */}
          <MovingCards />
-         
+        
          </div>
-         
+         <Footer />
     </div>
     </div>
-    <Footer />
+ 
     </BackgroundGradientAnimation>
   );
 }
