@@ -1,35 +1,54 @@
-import React from 'react'
-import { NewGlobe } from './NewGlobe'
-import { BackgroundGradientAnimation } from '../ui/background-gradient-animation'
-import { Meteors } from '../ui/meteors'
-import { LinkPreview } from '../ui/link-preview'
+"use client";
+import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
+import React from "react";
+import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
+import { BackgroundGradient } from "../ui/background-gradient";
+import { IconAppWindow } from "@tabler/icons-react";
+import Image from "next/image";
+import { MovingCards } from "./MovingCards";
+import Footer from "./Footer";
 
-const Contact = () => {
+export function Contact() {
+    const placeholders = [
+        "Can I pet that dawg?",
+        "Can I PET that DAWG?!",
+        "CAN I PET THAT DAWG?!?!",
+      ];
+    
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(e.target.value);
+      };
+      const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        console.log("submitted");
+      };
   return (
     <BackgroundGradientAnimation>
-      <div className='w-screen h-screen bg-white bg-dot-black/[0.2] flex flex-col items-center justify-around px-20'>
-        <Meteors number={20}/>
-        <div className='flex flex-col items-center justify-center'>
-          <h1 className="md:text-2xl text-xl lg:text-7xl font-mono text-center text-black relative z-20">
-            Hi, I'm Mehul.
-          </h1>
-        </div>
-        
-        <div className='text-left text-slate-500 relative z-20 mt-8 w-1/3'>
-          <p className="md:text-sm text-base lg:text-sm font-mono">
-            When I'm not composing clean, efficient code, you'll find me lost in the world of music. I'm a big fan of <LinkPreview url="https://ui.aceternity.com" className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">The 1975</LinkPreview>, a band that combines lyrical depth with mesmerizing melodies.
-            Books are another passion of mine, with <LinkPreview url="https://ui.aceternity.com" className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">"Norwegian Wood"</LinkPreview> and <LinkPreview url="https://ui.aceternity.com" className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">"Before the Coffee Gets Cold"</LinkPreview> being close to my heart. Lately, I've been exploring the intricate narratives of <LinkPreview url="https://ui.aceternity.com" className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">Kafka</LinkPreview> and other thought-provoking authors.
-            Coding has been my steadfast companion, a journey I've embraced wholeheartedly. While backend development is my forte, I also enjoy dabbling in frontend design. And somehow, <LinkPreview url="https://ui.aceternity.com" className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">Redis</LinkPreview> has become an indispensable tool in my toolkit.
-            I also play the drums in a band called <LinkPreview url="https://ui.aceternity.com" className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">eatbreakfast</LinkPreview>, where we create music that resonates. <br/> <br/> On a personal note, I have an insatiable need to keep my surroundings organized, and a particular fondness for the elegance of black and white.
-          </p>
-        </div>
-       
-        <div className='w-1/2 mt-12'>
-          <NewGlobe/>
-        </div>
-      </div>
+    <div className="bg-white bg-dot-black/[0.2] w-screen h-dvh">
+    <div className="h-full flex flex-col justify-evenly items-center px-4">
+
+      {/* <PlaceholdersAndVanishInput
+        placeholders={placeholders}
+        onChange={handleChange}
+        onSubmit={onSubmit}
+      /> */}
+      <div className="flex flex-col justify-center items-center space-y-2">
+        {/* <h1 className="text-slate-500 text-7xl font-light ">Testimonials </h1> */}
+         <MovingCards />
+         
+         </div>
+         
+    </div>
+    </div>
+    <Footer />
     </BackgroundGradientAnimation>
-  )
+  );
 }
 
-export default Contact
+
+
+
+
+
+
+

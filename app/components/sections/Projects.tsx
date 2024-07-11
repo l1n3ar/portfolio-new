@@ -47,7 +47,7 @@ const projects = [
 export function Projects() {
   return (
     <div className="min-h-screen w-full dark:bg-dot-white/[0.2] bg-white bg-dot-black/[0.2] relative flex flex-col items-center justify-center py-12">
-      <h2 className="text-6xl font-extralight mb-20 text-neutral-700">Work</h2>
+      {/* <h2 className="text-6xl font-extralight mb-20 text-neutral-700">Work</h2> */}
       <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-12 w-full">
         {projects.map((project, index) => (
           <div key={index} className="flex justify-around items-start">
